@@ -12,4 +12,4 @@ Steps
 - Run dotnet build
 - Run dotnet start
 - This should start the API at port http://localhost:5033
-- Use Postman to test the endPoints
+- Use Postman in the backend folder to test the endPoints
