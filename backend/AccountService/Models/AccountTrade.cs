@@ -6,7 +6,7 @@ namespace AccountService.Models
     {
         public int Id { get; set; }
         public int AccountId { get; set; }
-        public required string SecurityCode { get; set; }
+        public required string SecurityCode { get; set; } //3 characters only
         public required string Timestamp { get; set; }
         public required string Amount { get; set; }
 
