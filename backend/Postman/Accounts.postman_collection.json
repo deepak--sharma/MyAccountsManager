@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "362c8f7b-bdec-48ac-80c1-5b3a5e42ed8f",
+		"name": "Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17758013"
+	},
+	"item": [
+		{
+			"name": "trades",
+			"item": [
+				{
+					"name": "update trade status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"AccountId\": 2,\n    \"SecurityCode\": \"Sec\",\n    \"Timestamp\": \"13:00\",\n    \"Amount\": \"0.2\",\n    \"TradeType\": \"Buy\",\n    \"Status\": \"Executed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5033/api/trade/update/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"trade",
+								"update",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read account trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5033/api/trade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"trade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create account trade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"AccountId\": 3,\n    \"SecurityCode\": \"SC2\",\n    \"Timestamp\": \"00:00:00\",\n    \"Amount\": \"0\",\n    \"TradeType\": \"sell\",\n    \"Status\": \"placed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5033/api/trade/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"trade",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"FirstName\": \"steve\",\n    \"LastName\": \"smith\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5033/api/account/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"account",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"FirstName\": \"Captain\",\n    \"LastName\": \"America\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5033/api/account/update/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"account",
+								"update",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5033/api/account/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"account",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5033/api/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SearchAcounts",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5033/api/accounts/search?lastName=man",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5033",
+							"path": [
+								"api",
+								"accounts",
+								"search"
+							],
+							"query": [
+								{
+									"key": "lastName",
+									"value": "man"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
